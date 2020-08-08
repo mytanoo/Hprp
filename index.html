@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro HPRP</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="divimglogo"><img src="https://i.imgur.com/WeIBCUQ.jpg" alt="" id="logo"></div>
+    <div id="blococentral">
+        <div id="conj">
+            <div id="titulo">
+                <h1>Registro de Paciente</h1>
+            </div>
+            <div id="forms">
+                <form id="test-form"><!--Formulario de captação de dados-->
+                    <div id="campos">
+                        <div>
+                            <label> Nome </label>
+                        </div>
+                        <div>
+                          <input type="text" id="nome" placeholder="Nome da pessoa atendida" />  
+                        </div> 
+                        <div id="linha">
+                            <hr>
+
+                        </div>                       
+                    </div>
+
+                    <div id="campos">
+                        <div>
+                            <label> Passaporte </label>
+                        </div>
+                        <div>
+                          <input type="text" id="passaporte" placeholder="Passaporte da pessoa atendida" />  
+                          
+                        </div>
+                        <div id="linha">
+                            <hr>
+
+                        </div>                       
+                    </div>
+
+                    <div id="campos">
+                        <div>
+                            <label> Idade </label>
+                        </div>
+                        <div>
+                          <input type="text" id="idade" placeholder="Idade da pessoa atendida" />  
+                        </div> 
+                        <div id="linha">
+                            <hr>
+
+                        </div>                       
+                    </div>
+
+                    <div id="campos">
+                        <div>
+                            <label> Hora </label>
+                        </div>
+                        <div>
+                          <input type="text" id="dh" placeholder="Horario" />  
+                        </div>   
+                        <div id="linha">
+                            <hr>
+
+                        </div>                     
+                    </div>
+                    <hr id="separalinha">
+
+                    <div id="campos">
+                        <div>
+                            <label> Medico </label>
+                        </div>
+                        <div>
+                          <input type="text" id="medico" placeholder="Seu nome ingame" />  
+                        </div>  
+                        <div id="linha">
+                            <hr>
+
+                        </div>                      
+                    </div>
+
+                    <div id="campos">
+                        <div>
+                            <label> Passaporte </label>
+                        </div>
+                        <div>
+                          <input type="text" id="passaportemed" placeholder="Seu passaporte" />  
+                        </div>  
+                        <div id="linha">
+                            <hr>
+
+                        </div>                      
+                    </div>
+                    <hr id="separalinha">
+
+                    <div id="campos">
+                        <div>
+                            <label> Atendimento </label>
+                        </div>
+                        <div>
+                          <input type="text" id="atendimento" placeholder="Simplifique o que foi feito" />  
+                        </div>  
+                        <div id="linha">
+                            <hr>
+
+                        </div>                      
+                    </div>
+
+                    <div id="campos">
+                        <div>
+                            <label> Medicamento </label>
+                        </div>
+                        <div>
+                          <input type="text" id="medicamento" placeholder="dipiroca para dor no cu" />  
+                        </div> 
+                        <div id="linha">
+                            <hr>
+
+                        </div>                       
+                    </div>
+
+                    <div id="campos">
+                        <div>
+                            <label> Observação </label>
+                        </div>
+                        <div>
+                          <input type="text" id="obs" placeholder="" />  
+                        </div> 
+                        <div id="linha">
+                            <hr>
+
+                        </div>                       
+                    </div>
+
+                    <div id="campos">
+                        <input id="botao" type="button" value="Enviar e Copiar" onclick="AddRow()"/>
+                    </div>
+
+                    <div id="res">
+                        Gerador de texto
+                     
+                     </div>
+                    
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function AddRow(){
+        var nome = document.getElementById("nome").value;
+        var passaporte = document.getElementById("passaporte").value;
+        var idade = document.getElementById("idade").value;
+        var dh = document.getElementById("dh").value;
+        var medico = document.getElementById("medico").value;
+        var passaportemed = document.getElementById("passaportemed").value;
+        var atendimento = document.getElementById("atendimento").value;
+        var medicamento = document.getElementById("medicamento").value;
+        var obs = document.getElementById("obs").value;
+        
+        
+        var res = document.querySelector('div#res')
+        
+        res.innerHTML ="Laudo Médico - Hospital Ribeirão Pires <br>Esse só será divulgado sem a permissão do paciente por meio de uma procuração judicial! <br> </p>Nome: " +nome+ "<br> Passaporte: " +passaporte+ "<br>Idade:" +idade+ "<br>Data e Hora: " +dh+ "<br> </p>Médico: " +medico+ "<br>Passaporte: " +passaportemed+ "<br> </p>Atendimento:" +atendimento+ "<br>Medicamento: " +medicamento+ "<br> Observações:" +obs;
+        
+        
+        nome = document.getElementById("nome").value = '';
+        passaporte = document.getElementById("passaporte").value= '';
+        idade = document.getElementById("idade").value= '';
+        dh = document.getElementById("dh").value= '';
+        medico = document.getElementById("medico").value= '';
+        passaportemed = document.getElementById("passaportemed").value= '';
+        atendimento = document.getElementById("atendimento").value= '';
+        medicamento = document.getElementById("medicamento").value= '';
+        obs = document.getElementById("obs").value= '';
+
+
+
+    }
+
+    </script>
+</body>
+</html>
